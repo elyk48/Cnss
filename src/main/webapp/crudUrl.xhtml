@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">  
+<h:head>  
+    <title>UrlCRUD</title>  
+</h:head>  
+<h:body>  
+    <p:dialog id="urlDetail1"  header="Add Url" hideEffect="explode" appendTo="@(body)" resizable="false" draggable="false" closeOnEscape="true">  
+        <h:form>  
+  
+            <p:panelGrid columns="2">  
+                <h:outputLabel for="urlname" value="Url Name: *" />  
+                <p:inputText id="username" value="#{urlBean.newurl.name}" label="Url Name" placeholder="Url Name" />  
+  
+                
+   
+             
+  
+  
+                <p:outputLabel for="link" value="link" />  
+                <p:inputTextarea id="link" label="link" value="#{urlBean.newurl.link}" placeholder="link" />  
+  
+                <p:commandButton value="add" process="@form" id="AddButtonId"  icon="ui-icon-plus" update=":form1:userTable" actionListener="#{urlBean.addUrl()}" />  
+  
+            </p:panelGrid>  
+        </h:form>  
+  
+    </p:dialog>  
+ 
+   
+  
+   
+
+  
+</h:body>  
+  
+</html>  
